@@ -1,139 +1,107 @@
 @import url('layout.css');
 
-<<<<<<< HEAD
-@media only screen and (max-width: 767px) {
-    .left-image,
-    .right-image {
-        display: none; 
-    }
-    #form-container {
-        width: 100%; /* Set full width on screens narrower than 768px */
-    }
-}
-
-body {
-    background-color: rgba(164, 171, 173, 0.763);
-   }
-   #container {  
-       display: flex;        
-       align-items: center;
-       width: 100%;
-       
-   }
-   
-   #form-container {
-       width: 43%;
-       padding: 20px;
-       border: 1px solid #ccc;
-       border-radius: 22px;
-       background-color: #f9f9f9;
-       margin: 0 auto;
-   }
-   form {
-       margin: 10px;
-   }
-   label {
-       display: block;
-       margin-bottom: 10px;
-   }
-   input[type="text"],
-   select {
-       width: 100%;
-       padding: 5px;
-       margin-bottom: 10px;
-       box-sizing: border-box;
-   }
-   input[type="submit"] {
-       background-color: #4CAF50;
-       color: white;
-       padding: 10px 20px;
-       border: none;
-       cursor: pointer;
-   }
-   input[type="submit"]:hover {
-       background-color: #45a049;
-   }
-   
-   .form-row {
-       margin-bottom: 15px;
-       overflow: hidden;
-   }
-   .form-group {
-       float: left;
-       width: 48%;
-       margin-right: 2%;
-   }
-   .form-group:last-child {
-       margin-right: 0;
-   }
-   
-   select {
-       width: 200px;
-       height: 40px;
-   }
-   
-   .body-container {
-       display: flex;
-       justify-content: center;
-       
-   }
-   
-   .left-image,
-   .right-image {
-       width: 29%; 
-       height: 570px; 
-   }
-   
-   .footer-content {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       padding: 20px;
-       background-color: #333;
-       color: #fff;
-       position: fixed;
-       bottom: 0;
-       height: 100px;
-   }
-   
-   .logo-img {
-       height: 60px; /* Adjust as needed */
-       width: auto; /* Maintain aspect ratio */
-       margin-right: 20px; /* Adjust spacing between logo and line */
-       border-radius: 25px;
-   }
-   
-   .vertical-line {
-       height: 60px; /* Adjust height to match logo */
-       width: 1px; /* Adjust line thickness */
-       background-color: #fff; /* Adjust line color */
-       margin: 0 20px; /* Adjust spacing around the line */
-   }
-   
-   .footer-info {
-       text-align: left;
-   }
-   
-=======
 .left{
-    background-color: red;
     width: 33.33%;
     float: left;
     height: 900px;
+    background-image: url('../images/FR_left_image.jpeg');
+    background-size: cover;
 }
 
 .right{
-    background-color: red;
     width: 33.33%;
     float: right;
     height: 900px;
+    background-image: url('../images/FR_right_image.jpeg');
+    background-size: cover;
 }
 
 .center{
-    background-color: blue;
+    background-color:transparent;
     width: 33.33%;
     display: inline-block;
     height: 900px;
 
 }
->>>>>>> b01007fffeb88a665558527bcd58aa956e664017
+
+.center h2{
+color: blue; 
+text-align: center;
+font-weight: boldpx;
+}
+
+.center label{
+   display: inline-block;
+   width: 150px; 
+   margin-top: 5%;
+   margin-left: 10%;
+
+    font-weight: bold;
+}
+
+
+.center .input_field{
+        background-color: lightgray;
+        border-radius: 5px;
+        padding: 5px;
+
+      }
+.center .button{
+    margin-top: 5%;
+    margin-left: 40%;
+    text-align: center;
+
+}
+
+
+
+.button{
+  appearance: none;
+  background-color: rgb(46, 134, 228);
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #bd1a1a;
+}
+
+.button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}

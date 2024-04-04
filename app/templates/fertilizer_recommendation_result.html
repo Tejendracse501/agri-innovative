@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{%  block title %} Fertilizer Recommendation-AgriInnovative {% endblock %}
+{%block styles%} <link rel="stylesheet" type="text/css" href= "{{url_for('static', filename= 'css/fertilizer_recommendation_styles.css' ) }}">
+<link rel="stylesheet" type="text/css" href= "{{url_for('static', filename= 'css/result_styles.css' ) }}">
+{% endblock %}
+
+{%block body %}
+    <div class="container">
+        <h1>Fertilizer Recommendation</h1>
+        <p>We recommend you to use this fertilizer in your land!!!</p>
+        <p class="result"><b>FERTILIZER NAME :: </b><br>
+            {% if recommended %}
+            <p><b> </b>{{ recommended }}</p>
+            {% else %}
+            
+        {% endif %}</p>
+    </div>
+{% endblock %}

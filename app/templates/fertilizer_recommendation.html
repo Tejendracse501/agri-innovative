@@ -6,16 +6,66 @@
 {%block body %}
 
 <div class="left" id="left">
-
-</div>
+  
+</div> 
 
 <div class="center" id="center">
-    <p>center align</p>
+
+  <h2>FERTILIZER RECOMMENDATION</h2>
+
+  <form action="/fertilizer_name" method="post">
+    <label for="temp">Temperature</label>
+    <input class="input_field"  type="number" name="Temperature" id="temp"  required><br>
+    
+    <label for="humidity">Humidity</label>
+    <input class="input_field" type="number" name="Humidity" id="humidity" required><br>
+
+    <label for="moisture">Moisture</label>
+    <input class="input_field" type="number" name="Moisture" id="moisture"><br>
+    <label for="nitrogen">Nitrogen</label>
+    <input  class="input_field" type="number" name="Nitrogen" id="nitrogen" step="0.1"><br>
+
+    <label for="Potassium">Potassium</label>    
+    <input class="input_field" type="number" name="Potassium" id="Potassium" ><br>
+
+    <label for="phosphorous">Phosphorous</label>
+    <input class="input_field" type="number" name="Phosphorous" id="Phosphorous" ><br>
+
+
+    <div class="form_group">
+      <label for="crop"><b>Crop Type</b></label>
+      <select class="input_field" id="crop" name="Crop Type" required>
+        <option>Barley</option>
+        <option>Cotton</option>
+        <option>Ground Nuts</option>
+        <option>Maize</option>
+        <option>Millets</option>
+        <option>Oil seeds</option>
+        <option>Paddy</option>
+        <option>Pulses</option>
+        <option>Sugarcane</option>
+        <option>Tobacco</option>
+        <option>Wheat</option> 
+      </select>
+      <br />
+      <label for="soil"><b>Soil Type</b></label>
+      <select class="input_field" id="soil" name="Soil Type" required>
+        <option>Black</option>
+        <option>Clayey</option>
+        <option>Loamy</option>
+        <option>Red</option>
+        <option>Sandy</option>
+      </select>
+      
+    </div>
+    <input class="button" type="submit" value="predict" class="predict_button">
+  </form>
 
 </div>
-
+ 
 <div class="right" id="right">
 
 </div>
+
 
 {% endblock %}

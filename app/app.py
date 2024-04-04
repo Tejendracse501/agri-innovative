@@ -4,7 +4,10 @@ import numpy as np
 import requests
 import pickle
 from utils import config
+from utils.preprocess import fertilizer_name
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import LabelEncoder  
+
 
 
 app = Flask(__name__, static_url_path='/static')
@@ -48,6 +51,10 @@ def  disease_identification():
 @app.route('/fertilizer_recommendation')
 def fertilizer_recommendation():
     return render_template('fertilizer_recommendation.html')
+@app.route('/fertilizer_name', methods=['POST'])
+def get_fertilizer_name():
+    return fertilizer_name()
+    
 #---------------------------------------------------------------------CHECK WEATHER-----------------------------------------------------------------------
 @app.route('/check_weather')
 def check_weather():
