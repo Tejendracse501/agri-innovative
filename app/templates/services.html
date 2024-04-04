@@ -5,19 +5,18 @@
 {% block styles %}  <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/services_styles.css') }}" > {% endblock %}
 
 
-
 {% block body %}
 
-      <h2 style="text-align: center;letter-spacing: 2px;color: white;font-weight: 100;">SERVICES WE <B>PROVIDE</B></h2>
+      <h2 class="heading">SERVICES WE PROVIDE</h2>
       <br>
       <div class="cardsec">
       <div class="card">
         <div class="face front">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXIWp_DRMmI3qGd-wgDSb5zxqU5YGpGZNOFQ&usqp=CAU" alt="">
+            <img src="../static/images/suitable_market.jpg" alt="suitable_market_image">
             <h6>Find Suitable market</h6>
         </div>
         <div class="face back">
-            <h6>Find Nearest market</h6>
+            <h6>Find Suitable market</h6>
             <p>Find suitable market to sell crop</p>
             <div class="link">
                 <a href="{{url_for('suitable_market')}}">Click here</a>
@@ -27,7 +26,7 @@
 
     <div class="card">
         <div class="face front">
-            <img src="https://www.researchgate.net/publication/341892865/figure/fig4/AS:962414388445186@1606468879089/Segmentation-results-of-the-proposed-IoT-based-plant-disease-detection-scheme-a-original.jpg" alt="">
+            <img src="../static/images/crop_disease_identification.png" alt="crop_disease_identification_image">
             <h6>Disease Identification</h6>
         </div>
         <div class="face back">
@@ -41,20 +40,20 @@
 
     <div class="card">
         <div class="face front">
-            <img src="https://images.livemint.com/img/2022/12/30/1600x900/fertilizer_1672422775714_1672422775972_1672422775972.jpg" alt="">
+            <img src="../static/images/fertilizer_recommendation.png" alt="fertilizer_recommendation_image">
             <h6>Fertilizer recommendation</h6>
         </div>
         <div class="face back">
             <h6>Fertilizer recommendation</h6>
-            <p>Recommends Fertilizerto your crop</p>
+            <p>Recommends Fertilizer to your crop</p>
             <div class="link">
-                <a href="{{ url_for('fertilizer_recommendation') }}">Click here</a>
+                <a href="{{url_for('fertilizer_recommendation')}}">Click here</a>
             </div>
         </div>
     </div>
     <div class="card">
         <div class="face front">
-            <img src="https://storage.googleapis.com/kaggle-datasets-images/1046158/1760012/9c08835b1e7e1084728b5202089fb65b/dataset-cover.jpg?t=2020-12-19-05-11-01" alt="">
+            <img src="../static/images/crop_recommendation.png" alt="crop_recommendation_image">
             <h6>Crop Recommendation</h6>
         </div>
         <div class="face back">
@@ -67,7 +66,7 @@
     </div>
     <div class="card">
         <div class="face front">
-            <img src="https://www.showmetech.com.br/wp-content/uploads//2022/11/Meu-projeto-39-1920x1024.png" alt="">
+            <img src="../static/images/check_weather.png" alt="Weather Check Image"/>
             <h6>Check Weather</h6>
         </div>
         <div class="face back">

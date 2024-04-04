@@ -1,5 +1,6 @@
 @import url('layout.css');
 
+<<<<<<< HEAD
 @media only screen and (max-width: 767px) {
     .left-image,
     .right-image {
@@ -113,3 +114,26 @@ body {
        text-align: left;
    }
    
+=======
+.left{
+    background-color: red;
+    width: 33.33%;
+    float: left;
+    height: 900px;
+}
+
+.right{
+    background-color: red;
+    width: 33.33%;
+    float: right;
+    height: 900px;
+}
+
+.center{
+    background-color: blue;
+    width: 33.33%;
+    display: inline-block;
+    height: 900px;
+
+}
+>>>>>>> b01007fffeb88a665558527bcd58aa956e664017

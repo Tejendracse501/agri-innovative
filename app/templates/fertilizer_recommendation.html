@@ -1,114 +1,21 @@
 {% extends 'layout.html' %}
 
-{% block title %} Fertilizer Recommendation - AgriInnovative {% endblock %}
+{%  block title %} Fertilizer Recommendation-AgriInnovative {% endblock %}
+{%block styles%} <link rel="stylesheet" type="text/css" href= "{{url_for('static', filename= 'css/fertilizer_recommendation_styles.css' ) }}"> {% endblock %}
 
-{% block styles %} 
+{%block body %}
 
-<link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/fertilizer_recommendation_styles.css') }}" > 
- 
- 
+<div class="left" id="left">
 
-{% endblock %} 
+</div>
 
+<div class="center" id="center">
+    <p>center align</p>
 
-{% block body %}
-    <div class="body-container">
-        <img src="../static/images/FR_left_image.jpeg" alt="Left Image" class="left-image">
-        <div id="form-container">
-            <h1 align="center">Fertilizer Recommendation for Crops</h1>
-            <form action="/fertilizer_name" method="post">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="temp">Temperature:</label>
-                        <input type="number" name="Temperature" id="temp" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="humidity">Humidity:</label>
-                        <input type="number" name="Humidity" id="humidity" required>
-                    </div>
-                </div>
-        
-        
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="crop">Crop Type:</label>
-                        <select name="Crop Type" id="crop">
-                            <option>Barley</option>
-                            <option>Cotton</option>
-                            <option>Ground Nuts</option>
-                            <option>Maize</option>
-                            <option>Millets</option>
-                            <option>Oil seeds</option>
-                            <option>Paddy</option>
-                            <option>Pulses</option>
-                            <option>Sugarcane</option>
-                            <option>Tobacco</option>
-                            <option>Wheat</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="soil">Soil Type:</label>
-                        <select name="Soil Type" id="soil">
-                            <option>Black</option>
-                            <option>Clayey</option>
-                            <option>Loamy</option>
-                            <option>Red</option>
-                            <option>Sandy</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="moisture">Moisture:</label>
-                        <input type="number" name="Moisture" id="moisture" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="nitrogen">Nitrogen:</label>
-                        <input type="number" name="Nitrogen" id="nitrogen" required>
-                    </div>
-                    
-                </div>
-                <div class="form-row">
-                    
-                    <div class="form-group">
-                        <label for="Potassium">Potassium:</label>
-                        <input type="number" name="Potassium" id="potassium" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phosphorous">Phosphorous:</label>
-                        <input type="number" name="Phosphorous" id="phosphorous" required>
-                    </div>
-                </div>
-        
-                <div class="form-row" style="margin-left:40%;">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
+</div>
 
-            <!-- fertilizer recommendation here inside after comes after submit button. -->
-            {% if recommended %}
-            <p><b>The recommended fertilizer for your crop is: </b>{{ recommended }}</p>
-            {% else %}
-            
-        {% endif %}
-        </div>
-        <img src="../static/images/FR_right_image.jpeg" alt="Right Image" class="right-image">
-    </div>
+<div class="right" id="right">
 
-    
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="../static/images/agri.png" alt="Logo" class="logo-img">
-        </div>
-        <div class="vertical-line"></div>
-        <div class="footer-info">
-            <p class="info-text">Fertilizer recommendation optimizes nutrient application for crop growth while minimizing environmental harm. It tailors fertilizer use to soil and crop needs, boosting yield efficiency. This approach reduces nutrient runoff and promotes sustainable farming practices. By balancing productivity with environmental responsibility, fertilizer recommendation ensures long-term agricultural viability.</p>
-        </div>
-    </div>
-    
-    
-    
-   
-    
+</div>
+
 {% endblock %}

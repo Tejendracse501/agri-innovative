@@ -2,62 +2,41 @@
 
 {% block title %} News - AgriInnovative {% endblock %}
 
-{% block styles %}  <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/news_styles.css') }}" > {% endblock %}
+{% block styles %}  
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/news_styles.css') }}">
+{% endblock %}
 
 {% block body %}
+<div class="container flex-center">
+      <div class="marquee-container">
+            <marquee class="marquee" behavior="scroll" direction="left">
+                <b>GET LATEST FARMING  NEWS HERE!</b>
+            </marquee>
+        </div>
+    <div class="search-bar flex">
+        <input id="search-text" type="text" class="news-input" placeholder="e.g. Agriculture">
+        <button id="search-button" class="search-button">Search</button>
+    </div>
+</div>
 
 
-      <div class="ticker-wrapper-h">
-        <div class="heading"><b>Just Now</b></div>
-        <ul class="news-ticker-h">
-          <li><a href="">What is Lorem Ipsum?</a></li>
-          <li><a href="">Why do we use it?</a></li>
-          <li><a href="">Where does it come from?</a></li>
-          <li><a href="">Where can I get some?</a></li>
-        </ul>
-      </div>
-      <br>
+<main>
+    <div class="cards-container container flex" id="cards-container">
+    </div>
+</main>
 
-      <h3 style="margin-left: 25%;font-weight: 400;color: white;">Agriculture</h3>
-      <div class="newsbody">
-          <div class="newsimg"><img src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600" style="height: 100%;width: 100%;" alt=""></div> 
-          <div class="newspara"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia deserunt a beatae, eaque illo et nemo quasi totam ab accusamus magni accusantium earum rem laborum facere quae, dolorem ex.</p>
-          <a href=""><button class="newsbtn">View more</button></a>
-          </div>
-      </div>
-      <br>
-      <h3 style="margin-left: 25%;font-weight: 400;color: white;">Agriculture</h3>
-      <div class="newsbody">
-          <div class="newsimg"><img src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600" style="height: 100%;width: 100%;" alt=""></div> 
-          <div class="newspara"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia deserunt a beatae, eaque illo et nemo quasi totam ab accusamus magni accusantium earum rem laborum facere quae, dolorem ex.</p>
-          <a href=""><button class="newsbtn">View more</button></a>
-          </div>
-      </div>
-      <br>
-      <h3 style="margin-left: 25%;font-weight: 400;color: white;">Agriculture</h3>
-      <div class="newsbody">
-          <div class="newsimg"><img src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600" style="height: 100%;width: 100%;" alt=""></div> 
-          <div class="newspara"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia deserunt a beatae, eaque illo et nemo quasi totam ab accusamus magni accusantium earum rem laborum facere quae, dolorem ex.</p>
-          <a href=""><button class="newsbtn">View more</button></a>
-          </div>
-      </div>
-      <br>
-      <h3 style="margin-left: 25%;font-weight: 400;color: white;">Agriculture</h3>
-      <div class="newsbody">
-          <div class="newsimg"><img src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600" style="height: 100%;width: 100%;" alt=""></div> 
-          <div class="newspara"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia deserunt a beatae, eaque illo et nemo quasi totam ab accusamus magni accusantium earum rem laborum facere quae, dolorem ex.</p>
-          <a href=""><button class="newsbtn">View more</button></a>
-          </div>
-      </div>
+<template id="template-news-card">
+    <div class="card">
+        <div class="card-header">
+            <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+        </div>
+        <div class="card-content">
+            <h3 id="news-title">This is the Title</h3>
+            <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+            <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+        </div>
+    </div>
+</template>
 
-      <br>
-      <h3 style="margin-left: 25%;font-weight: 400;color: white;">Agriculture</h3>
-      <div class="newsbody">
-          <div class="newsimg"><img src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600" style="height: 100%;width: 100%;" alt=""></div> 
-          <div class="newspara"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia deserunt a beatae, eaque illo et nemo quasi totam ab accusamus magni accusantium earum rem laborum facere quae, dolorem ex.</p>
-          <a href=""><button class="newsbtn">View more</button></a>
-          </div>
-      </div>
-
-      
-      {% endblock %}
+<script src="../static/scripts/news.js"></script>
+{% endblock %}

@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 
 @media (min-width: 992px)
 {.navbar-expand-lg .navbar-collapse 
@@ -36,7 +43,7 @@
   display: inline-block;
   position: relative;
   color: rgb(13, 13, 13);
-}
+} 
 
 .nav-link.login-link {
     color: blue;
@@ -70,7 +77,7 @@
 
 body
 {
-    background-color: #6ec781;
+    background-color: white;
 }
 
 .desc
@@ -81,5 +88,48 @@ body
     padding: 2% 3% 3% 3%;
     text-align: justify;   
 }
+
+
+/*adding icons to navbar tabes */
+
+/*to give gap between icons and nav tab name */
+.nav-item .fa{
+  margin-right: 6px;
+}
+.nav-item .fa{
+  margin-left: 6px;
+}
+
+.sub-menu{
+  display: none;
+}
+
+.navbar ul li:hover .sub-menu{
+
+  display: block;
+  position: absolute;
+  background:#d1dcde ;
+}
+
+.nav-item{
+  list-style: none;
+}
+
+
+.sub-menu-nav-link{
+  color:#000000;
+  text-decoration: none;
+}
+
+.sub-menu-nav-link :hover{
+  width: 150px;
+  padding:10px;
+  background: transparent;
+  color:#1db5c3;
+  border-radius: 0;
+  text-align: left;
+
+}
+
 
 

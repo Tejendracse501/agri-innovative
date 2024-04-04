@@ -5,6 +5,39 @@
 
 {%block body %}
 
-<p class = 'hey'><b>Will soon update this!!</b></p>
+<div class="left" id="left">
+</div>
+
+<div class="center" id="center">
+    <h1>DISEASE IDENTIFICATION</h1>
+
+<form method=post enctype=multipart/form-data>
+
+    <b>Please Upload The Image</b>
+    <input type="file" name="file"id="inputfile" onchange="preview_image(event)">
+    <br>
+    <br>
+    <img id="output-image" />
+    <button type="submit">Get Prediction</button>
+
+
+  </form>
+
+  <script type="text/javascript">
+    function preview_image(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output-image')
+        output.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+</div>
+
+<div class="right" id="right">
+
+</div>
+
 
 {% endblock %}

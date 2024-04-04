@@ -5,6 +5,55 @@
 
 {%block body %}
 
-<p class = 'hey'><b>Will soon update this!!</b></p>
+<div class="left" id="left">
+</div> 
+
+<div class="center" id="center">
+
+  <h2>CROP RECOMMENDATION</h2>
+
+  <form action="/crop_prediction" method="post">
+    <label for="nitrogen">Nitrogen</label>
+    <input class="input_field"  type="number" name="nitrogen" id="nitrogen"  required><br>
+    
+    <label for="phosphorus">Phosphorus</label>
+    <input class="input_field" type="number" name="phosphorus" id="phosphorus" required><br>
+
+    <label for="potassium">Potassium</label>
+    <input class="input_field" type="number" name="potassium" id="potassium"><br>
+    <label for="ph">PH Value</label>
+    <input  class="input_field" type="number" name="ph" id="ph" step="0.1"><br>
+
+    <label for="rainfall">RainFall</label>
+    <input class="input_field" type="number" name="rainfall" id="rainfall" ><br>
+
+    <div class="form_group">
+      <label for="State"><b>State</b></label>
+      <select class="input_field"
+        onchange="print_city('state', this.selectedIndex);"
+        id="sts"
+        name="stt"
+        required
+      ></select>
+      <br />
+      <label for="City"><b>City</b></label>
+      <select class="input_field"
+        id="state"
+        name="city"
+        required
+      ></select>
+      <script language="javascript">
+        print_state("sts");
+      </script>
+    </div>
+    <input class="button" type="submit" value="predict" class="predict_button">
+  </form>
+
+</div>
+ 
+<div class="right" id="right">
+
+</div>
+
 
 {% endblock %}

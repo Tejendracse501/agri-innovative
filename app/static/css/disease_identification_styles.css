@@ -1,1 +1,36 @@
 @import url('layout.css');
+
+.left{
+    width: 33.33%;
+    float: left;
+    height: 900px;
+    background-image: url('../images/image1.jpeg');
+}
+
+.right{
+    width: 33.33%;
+    float: right;
+    height: 900px;
+    background-image: url('../images/image1.jpeg');
+}
+
+.center{
+    background-color:transparent;
+    width: 33.33%;
+    display: inline-block;
+    height: 900px;
+
+}
+
+  
+.center h1 {
+    margin-top: 5%;
+    color: rgb(46, 134, 228);
+}
+
+.center form {
+    margin-top: 40%;
+}
+.center form b {
+    margin-top: 45%;
+}

@@ -1,1 +1,23 @@
 @import url('layout.css');
+
+.left{
+    background-color: red;
+    width: 33.33%;
+    float: left;
+    height: 900px;
+}
+
+.right{
+    background-color: red;
+    width: 33.33%;
+    float: right;
+    height: 900px;
+}
+
+.center{
+    background-color: blue;
+    width: 33.33%;
+    display: inline-block;
+    height: 900px;
+
+}
