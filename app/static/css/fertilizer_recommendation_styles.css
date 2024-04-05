@@ -1,11 +1,73 @@
 @import url('layout.css');
 
+
+/* Media query for mobile screens */
+@media screen and (max-width: 767px) {
+  /* Hide the images on mobile screens */
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 5px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 0.8;
+  }
+
+  .left, .right {
+    display: none !important;
+  }
+   
+  .first-word {
+    margin-left: 110px; /* Adjust spacing between words */
+  }
+
+  .second-word {
+      margin-left: 45px; /* Adjust spacing between words */
+  }
+  .left, .right {
+    width: 0%;
+  }
+  
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the div horizontally */
+    width: 100%; /* Adjust width as needed */
+  }
+  .center form label{
+   margin-top: 0%;
+  }
+  * {
+    display: block;
+  }
+  .center form .button {
+    margin-left: 0%;
+  }
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw; /* Set form width to match viewport width */
+  }
+
+  /* Adjust margin for input fields and labels */
+  .input_field {
+    margin-bottom: 2px; /* Reduce vertical space between items */
+  }
+
+
+  
+  
+}
+
 .left{
     width: 33.33%;
     float: left;
     height: 900px;
     background-image: url('../images/FR_left_image.jpeg');
     background-size: cover;
+    display: block;
 }
 
 .right{
@@ -14,6 +76,7 @@
     height: 900px;
     background-image: url('../images/FR_right_image.jpeg');
     background-size: cover;
+    display: block;
 }
 
 .center{
@@ -35,8 +98,7 @@ font-weight: boldpx;
    width: 150px; 
    margin-top: 5%;
    margin-left: 10%;
-
-    font-weight: bold;
+   font-weight: bold;
 }
 
 
